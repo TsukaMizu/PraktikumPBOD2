@@ -1,39 +1,32 @@
 package Array;
 
-import java.util.ArrayList;
-
 class StackOfPoint extends Stack {
-    private ArrayList<Point> points;
-
     public StackOfPoint(){
-        points = new ArrayList<>();
     }
-
-    public void addPoint(Point point){
-        points.add(point);
+    
+    //method
+    @Override
+    public boolean cekElmtType(Object elmt){
+        return (elmt instanceof Point);
     }
-
-    public void removePoint(Point point){
-        points.remove(point);
-    }
-
-    public ArrayList<Object> getPoint(){
-        return list;
-    }
-
-    public Object getTop(){
-        if(!list.isEmpty()){
-            return list.get(list.size()-1);
-        }
-        else{
-            return null;
+    
+    @Override
+    public void cetak(){
+        int i;
+        for(i=getSize()-1; i >= 0; i--){
+            if(getElement(i) instanceof Point P){
+                P.cetak();
+            }
         }
     }
-
-    public void del(){
-        if(!list.isEmpty()){
-            list.remove(list.size()-1);
-            points.remove(points.size()-1);
-        }
-    }  
+    
+    @Override
+    public Point getElement(int i){
+       return (Point)super.getElement(i);
+    }
+    
+    @Override
+    public Point getTop(){
+       return (Point)super.getTop();
+    } 
 }

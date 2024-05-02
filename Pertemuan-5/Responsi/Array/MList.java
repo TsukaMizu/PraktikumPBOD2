@@ -21,7 +21,8 @@ public class MList {
             S2.del();
             S2.add(new Point(10,5));
             S2.cetak();
-            System.out.print("TOP Element : "); ((List) S2.getTop()).cetak();
+System.out.print("TOP Element : "); S2.getTop().cetak();
+            
             System.out.println("-----QueueOfNumber Q1-----");
             QueueOfNumber Q1 = new QueueOfNumber();
             Q1.add(12);
@@ -42,11 +43,12 @@ public class MList {
             Q2.add(new Point(-10,-10));
             Q2.cetak();
             System.out.println("HEAD Element : ");
-            ((List) Q2.getHead()).cetak();
+        Q2.getHead().cetak();
             System.out.println("TAIL Element : "); 
-            ((List) Q2.getTail()).cetak();
+        Q2.getTail().cetak();
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
+
     }
 }

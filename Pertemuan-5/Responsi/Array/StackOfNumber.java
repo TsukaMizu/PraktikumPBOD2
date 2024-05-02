@@ -1,5 +1,4 @@
 package Array;
-
 class StackOfNumber extends Stack {
     public Object getTop(){
         if(!list.isEmpty()){
@@ -8,6 +7,10 @@ class StackOfNumber extends Stack {
         else{
             return null;
         }
+    }
+    
+    public boolean cekElmtType(Object elmt){
+        return (elmt instanceof Integer);
     }
 
     public void del(){

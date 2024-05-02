@@ -26,7 +26,7 @@ public class Point {
     }
     
     public void cetak(){
-        System.out.println('['+getAbsis() + ',' +getOrdinat()+']');
+        System.out.println('['+absis + ',' +ordinat+']');
     }
 
 }
